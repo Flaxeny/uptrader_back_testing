@@ -10,7 +10,7 @@ from ..models import TreeMenu
 register = template.Library()
 
 
-@register.inclusion_tag('app/menu.html', takes_context=True)
+@register.inclusion_tag('menu/menu.html', takes_context=True)
 def draw_menu(context: RequestContext, name: str = '', parent: int = 0):
     """
     Draw tree menu
