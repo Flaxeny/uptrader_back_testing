@@ -8,13 +8,16 @@
     <meta charset="UTF-8">
     <title>Tree Menu</title>
     <link rel="stylesheet" href="{% static "css/main.css" %}">
+    {% load tree_menu %}
 </head>
-<body>
+<body style="background-color: aliceblue">
+    <div class="container">
+        <h1 align="center">Up Trader test task</h1>
+        <div align="center">
+            <nav>{% draw_menu "main_menu" %}</nav>
+            <h2>{{ name }}</h2>
+        </div>
 
-{% block content %}
-    <nav>{% draw_menu "main_menu" %}</nav>
-    <h2>{{ name }}</h2>
-{% endblock %}
-
+    </div>
 </body>
 </html>
